@@ -2,231 +2,91 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Link Collection</title>
+    <title>My Links Table</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        body{
+            font-family: Arial, sans-serif;
+            background:#f5f7fb;
         }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 20px;
+        .wrapper{
+            max-width:600px;
+            margin:40px auto;
+            background:#ffffff;
+            padding:20px 30px;
+            border-radius:10px;
+            box-shadow:0 4px 15px rgba(0,0,0,0.08);
         }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            overflow: hidden;
+        h2{
+            text-align:center;
+            margin-bottom:20px;
+            letter-spacing:1px;
         }
-
-        .header {
-            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-            color: white;
-            padding: 40px;
-            text-align: center;
+        table{
+            width:100%;
+            border-collapse:collapse;
+            text-align:center;
         }
-
-        .header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        th, td{
+            padding:12px 8px;
+            border:1px solid #e0e0e0;
+            font-weight:600;
+            letter-spacing:0.5px;
         }
-
-        .header p {
-            font-size: 1.2em;
-            opacity: 0.9;
+        tr:nth-child(even){
+            background:#fafafa;
         }
-
-        .links-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 0;
+        tr:hover{
+            background:#e3f2fd;
         }
-
-        .links-table th {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 20px;
-            text-align: left;
-            font-weight: 600;
-            font-size: 1.1em;
+        a{
+            text-decoration:none;
+            color:#1565c0;
         }
-
-        .links-table td {
-            padding: 20px;
-            border-bottom: 1px solid #eee;
-            transition: all 0.3s ease;
-        }
-
-        .links-table tr:hover td {
-            background: linear-gradient(90deg, #f093fb 0%, #f5576c 100%);
-            color: white;
-            transform: translateX(5px);
-        }
-
-        .link-btn {
-            display: inline-block;
-            background: linear-gradient(45deg, #ff6b6b, #ffd93d);
-            color: white;
-            padding: 12px 24px;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 0.9em;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        }
-
-        .link-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
-            background: linear-gradient(45deg, #ffd93d, #ff6b6b);
-        }
-
-        .link-title {
-            font-weight: 600;
-            font-size: 1.1em;
-            margin-bottom: 5px;
-            color: #333;
-        }
-
-        .link-desc {
-            color: #666;
-            font-size: 0.95em;
-        }
-
-        tr:hover .link-title, tr:hover .link-desc {
-            color: white;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                margin: 10px;
-                border-radius: 15px;
-            }
-            
-            .header {
-                padding: 30px 20px;
-            }
-            
-            .header h1 {
-                font-size: 2em;
-            }
-            
-            .links-table {
-                font-size: 0.9em;
-            }
-            
-            .links-table th,
-            .links-table td {
-                padding: 15px 10px;
-            }
+        a:hover{
+            text-decoration:underline;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>🔗 Link Collection</h1>
-            <p>Your favorite destinations in one beautiful place</p>
-        </div>
-
-        <table class="links-table">
-            <thead>
-                <tr>
-                    <th>Link Title</th>
-                    <th>Description</th>
-                    <th>Visit</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="link-title">Google</td>
-                    <td class="link-desc">Search engine and web services</td>
-                    <td><a href="https://google.com" target="_blank" class="link-btn">Go</a></td>
-                </tr>
-                <tr>
-                    <td class="link-title">GitHub</td>
-                    <td class="link-desc">Code collaboration platform</td>
-                    <td><a href="https://github.com" target="_blank" class="link-btn">Go</a></td>
-                </tr>
-                <tr>
-                    <td class="link-title">LinkedIn</td>
-                    <td class="link-desc">Professional networking site</td>
-                    <td><a href="https://linkedin.com" target="_blank" class="link-btn">Go</a></td>
-                </tr>
-                <tr>
-                    <td class="link-title">Stack Overflow</td>
-                    <td class="link-desc">Programming Q&A community</td>
-                    <td><a href="https://stackoverflow.com" target="_blank" class="link-btn">Go</a></td>
-                </tr>
-                <tr>
-                    <td class="link-title">YouTube</td>
-                    <td class="link-desc">Video sharing platform</td>
-                    <td><a href="https://youtube.com" target="_blank" class="link-btn">Go</a></td>
-                </tr>
-                <tr>
-                    <td class="link-title">Twitter</td>
-                    <td class="link-desc">Microblogging platform</td>
-                    <td><a href="https://twitter.com" target="_blank" class="link-btn">Go</a></td>
-                </tr>
-                <tr>
-                    <td class="link-title">Facebook</td>
-                    <td class="link-desc">Social networking service</td>
-                    <td><a href="https://facebook.com" target="_blank" class="link-btn">Go</a></td>
-                </tr>
-                <tr>
-                    <td class="link-title">Reddit</td>
-                    <td class="link-desc">Social news aggregation</td>
-                    <td><a href="https://reddit.com" target="_blank" class="link-btn">Go</a></td>
-                </tr>
-                <tr>
-                    <td class="link-title">Wikipedia</td>
-                    <td class="link-desc">Online encyclopedia</td>
-                    <td><a href="https://wikipedia.org" target="_blank" class="link-btn">Go</a></td>
-                </tr>
-                <tr>
-                    <td class="link-title">Netflix</td>
-                    <td class="link-desc">Streaming entertainment service</td>
-                    <td><a href="https://netflix.com" target="_blank" class="link-btn">Go</a></td>
-                </tr>
-                <tr>
-                    <td class="link-title">Amazon</td>
-                    <td class="link-desc">Online shopping marketplace</td>
-                    <td><a href="https://amazon.com" target="_blank" class="link-btn">Go</a></td>
-                </tr>
-                <tr>
-                    <td class="link-title">Slack</td>
-                    <td class="link-desc">Team communication platform</td>
-                    <td><a href="https://slack.com" target="_blank" class="link-btn">Go</a></td>
-                </tr>
-                <tr>
-                    <td class="link-title">Notion</td>
-                    <td class="link-desc">All-in-one workspace</td>
-                    <td><a href="https://notion.so" target="_blank" class="link-btn">Go</a></td>
-                </tr>
-                <tr>
-                    <td class="link-title">Figma</td>
-                    <td class="link-desc">Collaborative design tool</td>
-                    <td><a href="https://figma.com" target="_blank" class="link-btn">Go</a></td>
-                </tr>
-                <tr>
-                    <td class="link-title">Medium</td>
-                    <td class="link-desc">Publishing platform</td>
-                    <td><a href="https://medium.com" target="_blank" class="link-btn">Go</a></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<div class="wrapper">
+    <h2>Favorite Links</h2>
+    <table>
+        <tr>
+            <td><a href="https://www.netflix.com" target="_blank">NETFLIX</a></td>
+            <td><a href="https://www.amazon.com" target="_blank">AMAZON</a></td>
+            <td><a href="https://www.facebook.com" target="_blank">FACEBOOK</a></td>
+            <td><a href="https://www.linkedin.com" target="_blank">LINKEDIN</a></td>
+            <td><a href="https://www.instagram.com" target="_blank">INSTGRAM</a></td>
+        </tr>
+        <tr>
+            <td><a href="https://www.netflix.com" target="_blank">NETFLIX</a></td>
+            <td><a href="https://www.amazon.com" target="_blank">AMAZON</a></td>
+            <td><a href="https://www.facebook.com" target="_blank">FACEBOOK</a></td>
+            <td><a href="https://www.linkedin.com" target="_blank">LINKEDIN</a></td>
+            <td><a href="https://www.instagram.com" target="_blank">INSTGRAM</a></td>
+        </tr>
+        <tr>
+            <td><a href="https://www.netflix.com" target="_blank">NETFLIX</a></td>
+            <td><a href="https://www.amazon.com" target="_blank">AMAZON</a></td>
+            <td><a href="https://www.facebook.com" target="_blank">FACEBOOK</a></td>
+            <td><a href="https://www.linkedin.com" target="_blank">LINKEDIN</a></td>
+            <td><a href="https://www.instagram.com" target="_blank">INSTGRAM</a></td>
+        </tr>
+        <tr>
+            <td><a href="https://www.netflix.com" target="_blank">NETFLIX</a></td>
+            <td><a href="https://www.amazon.com" target="_blank">AMAZON</a></td>
+            <td><a href="https://www.facebook.com" target="_blank">FACEBOOK</a></td>
+            <td><a href="https://www.linkedin.com" target="_blank">LINKEDIN</a></td>
+            <td><a href="https://www.instagram.com" target="_blank">INSTGRAM</a></td>
+        </tr>
+        <tr>
+            <td><a href="https://www.netflix.com" target="_blank">NETFLIX</a></td>
+            <td><a href="https://www.amazon.com" target="_blank">AMAZON</a></td>
+            <td><a href="https://www.facebook.com" target="_blank">FACEBOOK</a></td>
+            <td><a href="https://www.linkedin.com" target="_blank">LINKEDIN</a></td>
+            <td><a href="https://www.instagram.com" target="_blank">INSTGRAM</a></td>
+        </tr>
+    </table>
+</div>
 </body>
 </html>
